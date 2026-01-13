@@ -1,27 +1,52 @@
-# Credit-Card-Fraud-Detection---Classification
+# 💳 Credit Card Fraud Detection (Classification)
 
+## 📌 Project Overview
+Credit card fraud is a major issue in the financial sector. The goal of this project is to **detect fraudulent credit card transactions** using machine learning classification algorithms.
 
+The dataset is **highly imbalanced**, making traditional accuracy metrics unreliable. Therefore, we focus on metrics such as **Precision, Recall, F1-Score, and AUPRC (Area Under Precision-Recall Curve)**.
 
+---
 
-Dataset Information
-It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase.
+## 📂 Dataset Information
+- **Source:** Kaggle – Credit Card Fraud Detection  
+- **Link:** https://www.kaggle.com/mlg-ulb/creditcardfraud  
 
-The dataset contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.
+### Dataset Description
+- Transactions made by **European cardholders** in September 2013
+- Covers transactions over **2 days**
+- **Total transactions:** 284,807  
+- **Fraudulent transactions:** 492  
+- **Fraud ratio:** 0.172%
 
-It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-sensitive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
+### Features
+- **V1 – V28:** PCA-transformed numerical features (confidential)
+- **Time:** Seconds elapsed since the first transaction
+- **Amount:** Transaction amount
+- **Class:** Target variable  
+  - `1` → Fraud  
+  - `0` → Normal transaction
 
-Given the class imbalance ratio, we recommend measuring the accuracy using the Area Under the Precision-Recall Curve (AUPRC). Confusion matrix accuracy is not meaningful for unbalanced classification.
+> ⚠️ Due to confidentiality, original feature meanings are not available.
 
-Download link: https://www.kaggle.com/mlg-ulb/creditcardfraud
+---
 
+## ⚖️ Class Imbalance
+The dataset is **extremely imbalanced**, so:
+- Accuracy is **not a reliable metric**
+- Confusion Matrix alone is **misleading**
+- Preferred evaluation metrics:
+  - Precision
+  - Recall
+  - F1 Score
+  - **AUPRC (recommended)**
 
-# Libraries
-pandas/n
-matplotlib\n
-seaborn\n
+---
+
+## 🧰 Libraries Used
+```bash
+pandas
+matplotlib
+seaborn
 scikit-learn
-# Algorithms
-Logistic Regression
-Random Forest
-XGBoost
+
 Best Model F1 Score: 87.00
