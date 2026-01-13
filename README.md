@@ -16,9 +16,9 @@ Download link: https://www.kaggle.com/mlg-ulb/creditcardfraud
 
 
 # Libraries
-pandas
-matplotlib
-seaborn
+pandas\n
+matplotlib\n
+seaborn\n
 scikit-learn
 # Algorithms
 Logistic Regression
